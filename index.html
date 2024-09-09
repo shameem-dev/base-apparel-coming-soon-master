@@ -12,33 +12,48 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="script.js" defer ></script>
+ 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   
 </head>
 <body class="body">
-  <nav class="my-8 ml-3">
-    <img src="images/logo.svg" alt="Base appeal logo">
-  </nav>
-  <img src="images/hero-mobile.jpg" alt="hero image" class="w-full">
-  <div class="text-area my-12 w-4/5 mx-auto" >
-    <div class="h1-p">
-        <h1 class="text-area__h1">We're <br><span>coming <br>soon</span></h1>
-        <p class="text-area__p text-center my-4">Hello fellow shoppers! We're currently building our new fashion store. 
-        Add your email below to stay up-to-date with announcements and our launch deals.</p>
-    </div>
-    
-      <div class="input-area relative ">
-        <input type="email" placeholder="Email Address" class="text-area__input w-full p-3  pl-4 border rounded-3xl ">
-        <div class="icon absolute top-0 right-0   h-full rounded-3xl flex justify-center items-center px-7" >
-            <img src="images/icon-arrow.svg" alt="icon">
-        </div>
-      </div>
-      
-        
-      </div>
-      
-  </div>
+	<main class="md:flex justify-between items-start">
+		<div class="md:flex flex-col justify-center">
+			<nav class="my-8 ml-3 md:ml-32 md:my-16">
+				<img src="images/logo.svg" alt="Base appeal logo">
+			</nav>
+			<div>
+				<div class="img">
+					<img src="images/hero-mobile.jpg" alt="hero image" class="w-full md:hidden">
+				</div>
+				<div class="text-area my-12 w-4/5 mx-auto md:max-w-2xl " >
+					<div class="h1-p md:w-4/5 md:mx-auto">
+						<h1 class="text-area__h1">We're <br><span>coming <br>soon</span></h1>
+						<p class="text-area__p text-center my-4">Hello fellow shoppers! We're currently building our new fashion store. 
+						Add your email below to stay up-to-date with announcements and our launch deals.</p>
+					</div>
+					<div class="md:w-4/5 md:mx-auto ">
+						<div class="input-area relative ">
+							<input type="email" placeholder="Email Address" class="text-area__input w-full p-3  pl-4 border rounded-3xl " id="email-input">
+							<div class="absolute top-3 right-20 hidden" id="error-icon">
+								<img src="images/icon-error.svg" alt="Error icon"  class="a">
+							</div>
+							<div class="icon  absolute top-0 right-0   h-full rounded-3xl flex justify-center items-center px-7 cursor-pointer hover:scale-105" id="email_click" >
+								<img src="images/icon-arrow.svg" alt="icon">
+							</div>
+						</div>
+						<p class=" text-red-500 font-semibold p-1 pl-4 hidden" id="error__p">Please provide a valid email address</p>
+					</div>
+				</div>
+		
+			</div>
+		</div>
+		<div class="desktop-img h-screen">
+			<img src="images/hero-desktop.jpg" alt="hero-desktop" class="hidden md:block h-screen object-cover">
+		</div>
+
+	</main>
 
 
 
